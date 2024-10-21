@@ -2,9 +2,10 @@ package triangle;
 
 public class Triangle {
 
+
     private int side1, side2, side3;
     private static final String P_EQUILATERAL = "equilateral";
-    private static final String P_ISOSCELES = "isossceles";
+    private static final String P_ISOSCELES = "isosceles";
     private static final String P_RIGHTANGLED = "right-angled";
     private static final String P_SCALENE = "scalene";
     private static final String P_IMPOSSIBLE = "impossible";

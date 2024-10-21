@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TriangleTest  {
 
+    /**
+     * Test if triangle have 3 equals sides correctly = equilateral
+     */
     @Test
     public void testEquilateralTriangle() {
         Triangle triangle = new Triangle(5, 5, 5);
@@ -15,15 +18,21 @@ public class TriangleTest  {
         assertFalse(triangle.isScalene());
     }
 
+    /**
+     * Test if triangle have 2 equals sides correctly = isosceles
+     */
     @Test
     public void testIsoscelesTriangle() {
         Triangle triangle = new Triangle(5, 5, 3);
-        assertEquals("isossceles", triangle.classify());
+        assertEquals("isosceles", triangle.classify());
         assertTrue(triangle.isIsosceles());
         assertFalse(triangle.isEquilateral());
         assertFalse(triangle.isScalene());
     }
 
+    /**
+     * Test if triangle have 3 different sides correctly = scalene
+     */
     @Test
     public void testScaleneTriangle() {
         Triangle triangle = new Triangle(3, 4, 5);
@@ -33,12 +42,18 @@ public class TriangleTest  {
         assertTrue(triangle.isScalene());
     }
 
+    /**
+     * Test if triangle is right-angled(90º)
+     */
     @Test
     public void testRightAngledTriangle() {
         Triangle triangle = new Triangle(5, 3, 4);
         assertTrue(triangle.isRightAngled());
     }
 
+    /**
+     * Test if triangle is impossible
+     */
     @Test
     public void testImpossibleTriangle() {
         Triangle triangle = new Triangle(-1, 1, 3);
@@ -46,6 +61,9 @@ public class TriangleTest  {
         assertTrue(triangle.isImpossible());
     }
 
+    /**
+     * Test area of triangle
+     */
     @Test
     public void testTriangleArea() {
         Triangle triangle = new Triangle(3, 4, 5);
@@ -55,6 +73,9 @@ public class TriangleTest  {
         assertEquals(-1.0, impossibleTriangle.getArea());
     }
 
+    /**
+     * Test Perimeter of triangle
+     */
     @Test
     public void testPerimeter() {
         Triangle triangle = new Triangle(3, 4, 5);
