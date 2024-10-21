@@ -4,3 +4,24 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.10/samples
  */
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClass = 'Main'  // Substitua pelo nome da classe principal que contém o método main
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
