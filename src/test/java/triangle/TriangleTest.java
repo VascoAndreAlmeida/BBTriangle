@@ -11,7 +11,7 @@ public class TriangleTest  {
      */
     @Test
     public void testEquilateralTriangle() {
-        Triangle triangle = new Triangle(5, 5, 5);
+        Triangle triangle = new Triangle(100, 100, 100);
         assertEquals("equilateral", triangle.classify());
         assertTrue(triangle.isEquilateral());
         assertTrue(triangle.isIsosceles());
@@ -23,7 +23,7 @@ public class TriangleTest  {
      */
     @Test
     public void testIsoscelesTriangle() {
-        Triangle triangle = new Triangle(5, 5, 3);
+        Triangle triangle = new Triangle(1, 1, 2);
         assertEquals("isosceles", triangle.classify());
         assertTrue(triangle.isIsosceles());
         assertFalse(triangle.isEquilateral());
@@ -35,7 +35,7 @@ public class TriangleTest  {
      */
     @Test
     public void testScaleneTriangle() {
-        Triangle triangle = new Triangle(3, 4, 5);
+        Triangle triangle = new Triangle(98, 99, 100);
         assertEquals("scalene", triangle.classify());
         assertFalse(triangle.isEquilateral());
         assertFalse(triangle.isIsosceles());
@@ -47,7 +47,7 @@ public class TriangleTest  {
      */
     @Test
     public void testRightAngledTriangle() {
-        Triangle triangle = new Triangle(5, 3, 4);
+        Triangle triangle = new Triangle(3, 4, 5);
         assertTrue(triangle.isRightAngled());
     }
 
@@ -56,7 +56,7 @@ public class TriangleTest  {
      */
     @Test
     public void testImpossibleTriangle() {
-        Triangle triangle = new Triangle(-1, 1, 3);
+        Triangle triangle = new Triangle(-1, 1, 2);
         assertEquals("impossible", triangle.classify());
         assertTrue(triangle.isImpossible());
     }
@@ -66,8 +66,8 @@ public class TriangleTest  {
      */
     @Test
     public void testTriangleArea() {
-        Triangle triangle = new Triangle(3, 4, 5);
-        assertEquals(6.0, triangle.getArea(), 0.001);
+        Triangle triangle = new Triangle(100, 100, 100);
+        assertEquals(4330.127, triangle.getArea(), 0.001);
 
         Triangle impossibleTriangle = new Triangle(-1, 1, 3);
         assertEquals(-1.0, impossibleTriangle.getArea());
@@ -78,7 +78,7 @@ public class TriangleTest  {
      */
     @Test
     public void testPerimeter() {
-        Triangle triangle = new Triangle(3, 4, 5);
-        assertEquals(12, triangle.getPerimeter());
+        Triangle triangle = new Triangle(100, 100, 100);
+        assertEquals(300, triangle.getPerimeter());
     }
 }

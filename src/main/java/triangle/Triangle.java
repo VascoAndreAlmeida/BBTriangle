@@ -94,7 +94,7 @@ public class Triangle {
     /**
      * Checks if the triangle is isosceles. Note: isosceles triangle may
      also
-     * be equilateral and right-angled.
+     * be equilateral and right-ang led.
      * @return true if two sides hahave equal length
      */
     public boolean isIsosceles() {
@@ -130,8 +130,6 @@ public class Triangle {
         }else{
             return false;
         }
-
-
     }
 
     /**
