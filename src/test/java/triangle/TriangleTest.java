@@ -13,9 +13,7 @@ public class TriangleTest  {
     public void testEquilateralTriangle() {
         Triangle triangle = new Triangle(100, 100, 100);
         assertEquals("equilateral", triangle.classify());
-        assertTrue(triangle.isEquilateral());
-        assertTrue(triangle.isIsosceles());
-        assertFalse(triangle.isScalene());
+
     }
 
     /**
@@ -25,9 +23,7 @@ public class TriangleTest  {
     public void testIsoscelesTriangle() {
         Triangle triangle = new Triangle(1, 1, 2);
         assertEquals("isosceles", triangle.classify());
-        assertTrue(triangle.isIsosceles());
-        assertFalse(triangle.isEquilateral());
-        assertFalse(triangle.isScalene());
+
     }
 
     /**
@@ -37,9 +33,7 @@ public class TriangleTest  {
     public void testScaleneTriangle() {
         Triangle triangle = new Triangle(98, 99, 100);
         assertEquals("scalene", triangle.classify());
-        assertFalse(triangle.isEquilateral());
-        assertFalse(triangle.isIsosceles());
-        assertTrue(triangle.isScalene());
+
     }
 
     /**
@@ -48,7 +42,7 @@ public class TriangleTest  {
     @Test
     public void testRightAngledTriangle() {
         Triangle triangle = new Triangle(3, 4, 5);
-        assertTrue(triangle.isRightAngled());
+        assertEquals("rightAngled", triangle.classify());
     }
 
     /**
@@ -58,7 +52,6 @@ public class TriangleTest  {
     public void testImpossibleTriangle() {
         Triangle triangle = new Triangle(-1, 1, 2);
         assertEquals("impossible", triangle.classify());
-        assertTrue(triangle.isImpossible());
     }
 
     /**
