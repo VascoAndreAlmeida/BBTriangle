@@ -23,7 +23,6 @@ public class TriangleTest  {
     public void testIsoscelesTriangle() {
         Triangle triangle = new Triangle(1, 1, 2);
         assertEquals("isosceles", triangle.classify());
-
     }
 
     /**

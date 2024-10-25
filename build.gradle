@@ -7,6 +7,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'jacoco'
 }
 
 application {
@@ -24,6 +25,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging { events "passed", "skipped", "failed", "standardOut", "standardError" }
+    reports.html.required = true
+    finalizedBy jacocoTestReport
 }
 
 task myJavadocs (type: Javadoc) {
