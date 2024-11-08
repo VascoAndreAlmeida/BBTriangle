@@ -51,8 +51,14 @@ public class TriangleTest  {
     public void testImpossibleTriangle() {
         Triangle triangle = new Triangle(-1, 1, 2);
         assertEquals("impossible", triangle.classify());
+
     }
 
+    @Test
+    public void testImpossibleTriangle2() {
+        Triangle triangle = new Triangle(0, 1, 2);
+        assertEquals("impossible", triangle.classify());
+    }
     /**
      * Test area of triangle
      */
